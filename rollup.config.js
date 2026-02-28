@@ -1,25 +1,22 @@
-import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
+import babel from "rollup-plugin-babel";
+import resolve from "rollup-plugin-node-resolve";
 
 export default {
-  input: 'src/index.js', // 打包入口
+  input: "src/index.js",
   output: [
     {
-      file: 'lib/sparrow.js', // 对于 Nodejs，打包成 commonjs
-      format: 'cjs',
+      file: "lib/sparrow.js",
+      format: "cjs",
     },
     {
-      file: 'esm/sparrow.js', // 对于浏览器，打包成 ES module
-      format: 'es',
+      file: "esm/sparrow.js",
+      format: "es",
     },
     {
-      file: 'dist/sparrow.min.js',
-      name: 'sp',
-      format: 'umd', // 对于 Nodejs 和浏览器，打包成混合模式
+      file: "dist/sparrow.min.js",
+      name: "sp",
+      format: "umd",
     },
   ],
-  plugins: [
-    resolve(),
-    babel(), // 使用 babel 插件
-  ],
+  plugins: [resolve(), babel()],
 };
