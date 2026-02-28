@@ -1,10 +1,10 @@
 {
   "name": "@njygocrazy/sparrow",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/sparrow.js",
   "module": "esm/sparrow.js",
-  "unpkg": "dist/sparrow.min.js", 
-   "scripts": {
+  "unpkg": "dist/sparrow.min.js",
+  "scripts": {
     "lint": "eslint --fix",
     "test": "jest",
     "test-live": "cross-env DEBUG_MODE=1 jest --coverage",
